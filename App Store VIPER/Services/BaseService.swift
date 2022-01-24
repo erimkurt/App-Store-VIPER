@@ -8,6 +8,7 @@
 import Foundation
 
 class BaseService {
-    let baseURLRSS: String = "\(Config.baseProtocol)rss.\(Config.baseURL)/api/\(Config.version)/\(Config.region)/\(MediaType.iosApps.rawValue)"
+    let baseURLRSS: String = "\(Config.baseProtocol)rss.\(Config.baseURLMarketingTools)/api/\(Config.version)/\(Config.region)/\(MediaType.iosApps.rawValue)"
+    let baseURLMarketingTools: String = "\(Config.baseProtocol)\(Config.baseURLMarketingTools)/\(Config.region)"
     let baseURL: String = "\(Config.baseProtocol)\(Config.baseURL)/\(Config.region)"
 }

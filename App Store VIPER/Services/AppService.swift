@@ -10,7 +10,7 @@ import Alamofire
 
 class AppService: BaseService {
     func getTopFree(completion: @escaping (AFDataResponse<FeedResponse>) -> ()) {
-        let api = "\(baseURLRSS)/top-free/all/100/explicit.json"
+        let api = "\(baseURLRSS)/top-free/50/apps.json"
         AF.request(api, method: .get).responseDecodable(completionHandler: completion)
     }
     

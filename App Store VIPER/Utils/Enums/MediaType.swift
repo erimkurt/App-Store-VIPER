@@ -10,7 +10,7 @@ import Foundation
 enum MediaType: String, Decodable {
     case appleMusic = "apple-music"
     case itunesMusic = "itunes-music"
-    case iosApps = "ios-apps"
+    case iosApps = "apps"
     case books = "books"
     case movies = "movies"
     case itunesU = "itunes-u"

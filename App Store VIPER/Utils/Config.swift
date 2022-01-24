@@ -9,7 +9,8 @@ import Foundation
 
 class Config {
     static let baseProtocol = "https://"
+    static let baseURLMarketingTools = "applemarketingtools.com"
     static let baseURL = "itunes.apple.com"
-    static let version = "v1"
+    static let version = "v2"
     static let region = "th"
 }
