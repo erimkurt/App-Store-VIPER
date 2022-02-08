@@ -13,9 +13,9 @@ class ApplicationDetailRouter: ApplicationDetailRouterInterface {
 
     static func createModule(_ applicationID: String) -> UIViewController {
         let viewController = UIStoryboard.loadViewController() as ApplicationDetailViewController
-        let presenter: ApplicationDetailPresenterInterface & ApplicationDetailInteractorDelegate = ApplicationDetailPresenter()
-        let interactor: ApplicationDetailInteractorInterface = ApplicationDetailInteractor()
-        let router: ApplicationDetailRouterInterface = ApplicationDetailRouter()
+        var presenter: ApplicationDetailPresenterInterface & ApplicationDetailInteractorDelegate = ApplicationDetailPresenter()
+        var interactor: ApplicationDetailInteractorInterface = ApplicationDetailInteractor()
+        var router: ApplicationDetailRouterInterface = ApplicationDetailRouter()
 
         viewController.presenter =  presenter
 

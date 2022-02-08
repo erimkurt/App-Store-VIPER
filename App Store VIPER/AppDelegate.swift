@@ -9,11 +9,11 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    let window: UIWindow = UIWindow()
+    lazy var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window.rootViewController = UINavigationController(rootViewController: TopFreeListRouter.createModule())
-        window.makeKeyAndVisible()
+        window?.rootViewController = UINavigationController(rootViewController: TopFreeListRouter.createModule())
+        window?.makeKeyAndVisible()
         return true
     }
 }

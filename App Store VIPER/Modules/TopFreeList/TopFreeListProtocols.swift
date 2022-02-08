@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TopFreeListPresenterInterface: class {
+protocol TopFreeListPresenterInterface {
     var view: TopFreeListViewInterface? { get set }
     var interactor: TopFreeListInteractorInterface? { get set }
     var router: TopFreeListRouterInterface? { get set }
@@ -22,27 +22,27 @@ protocol TopFreeListPresenterInterface: class {
     func showApplicationDetail(id: String)
 }
 
-protocol TopFreeListViewInterface: class {
+protocol TopFreeListViewInterface: AnyObject {
     var presenter: TopFreeListPresenterInterface? { get set }
     
     func updateUI()
     func showError(error: Error)
 }
 
-protocol TopFreeListRouterInterface: class {
+protocol TopFreeListRouterInterface {
     var viewController: UIViewController? { get set }
     static func createModule() -> UIViewController
     
     func presentApplicationDetail(id: String)
 }
 
-protocol TopFreeListInteractorInterface: class {
+protocol TopFreeListInteractorInterface {
     var presenter: TopFreeListInteractorDelegate? { get set }
     
     func getTopFreeList()
 }
 
-protocol TopFreeListInteractorDelegate: class {
+protocol TopFreeListInteractorDelegate: AnyObject {
     func getTopFreeListSuccess(feed: Feed)
     func failed(error: Error)
 }

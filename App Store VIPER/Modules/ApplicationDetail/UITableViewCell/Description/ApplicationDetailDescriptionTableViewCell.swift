@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ApplicationDetailDescriptionTableViewCellDelegate: class {
+protocol ApplicationDetailDescriptionTableViewCellDelegate: AnyObject {
     func applicationDetailDescriptionTableViewCell(expanded sender: ApplicationDetailDescriptionTableViewCell)
 }
 

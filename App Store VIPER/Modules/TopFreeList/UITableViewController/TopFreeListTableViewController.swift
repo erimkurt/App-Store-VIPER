@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol TopFreeListTableViewControllerDelegate: class {
+protocol TopFreeListTableViewControllerDelegate: AnyObject {
     func topFreeListTableViewController(didSelect application: Application?, sender: TopFreeListTableViewController)
 }
 

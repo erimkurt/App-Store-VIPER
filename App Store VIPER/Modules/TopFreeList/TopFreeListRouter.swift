@@ -13,9 +13,9 @@ class TopFreeListRouter: TopFreeListRouterInterface {
 
     static func createModule() -> UIViewController {
         let viewController = UIStoryboard.loadViewController() as TopFreeListViewController
-        let presenter: TopFreeListPresenterInterface & TopFreeListInteractorDelegate = TopFreeListPresenter()
-        let interactor: TopFreeListInteractorInterface = TopFreeListInteractor()
-        let router: TopFreeListRouterInterface = TopFreeListRouter()
+        var presenter: TopFreeListPresenterInterface & TopFreeListInteractorDelegate = TopFreeListPresenter()
+        var interactor: TopFreeListInteractorInterface = TopFreeListInteractor()
+        var router: TopFreeListRouterInterface = TopFreeListRouter()
 
         viewController.presenter =  presenter
 

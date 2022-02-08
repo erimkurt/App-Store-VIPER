@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ApplicationDetailPresenterInterface: class {
+protocol ApplicationDetailPresenterInterface {
     var view: ApplicationDetailViewInterface? { get set }
     var interactor: ApplicationDetailInteractorInterface? { get set }
     var router: ApplicationDetailRouterInterface? { get set }
@@ -19,25 +19,25 @@ protocol ApplicationDetailPresenterInterface: class {
     func fetchApplication()
 }
 
-protocol ApplicationDetailViewInterface: class {
+protocol ApplicationDetailViewInterface: AnyObject {
     var presenter: ApplicationDetailPresenterInterface? { get set }
     
     func updateUI()
     func showError(error: Error)
 }
 
-protocol ApplicationDetailRouterInterface: class {
+protocol ApplicationDetailRouterInterface {
     var viewController: UIViewController? { get set }
     static func createModule(_ applicationID: String) -> UIViewController
 }
 
-protocol ApplicationDetailInteractorInterface: class {
+protocol ApplicationDetailInteractorInterface {
     var presenter: ApplicationDetailInteractorDelegate? { get set }
     
     func getApplication(form: GetApplicationForm)
 }
 
-protocol ApplicationDetailInteractorDelegate: class {
+protocol ApplicationDetailInteractorDelegate: AnyObject {
     func getApplicationSuccess(lookUp: LookUp)
     func failed(error: Error)
 }
